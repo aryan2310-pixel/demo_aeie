@@ -11,8 +11,8 @@ export const Clubs: React.FC = () => {
     },
     {
       id: 2,
-      name: "IETE Club",
-      img: "/path-to-iete-club-image.jpg", // Replace with your image path
+      name: "AEIE Club",
+      img: "/path-to-AEIE-club-image.jpg", // Replace with your image path
       link: "https://example.com/iete", // Replace with real link
     },
   ];

@@ -1,6 +1,7 @@
 import react, { useState } from "react";
 import { Link, Outlet } from "@tanstack/react-router";
 import { motion } from "motion/react";
+import { Footer } from "./Footer";
 
 export function Homelayout(): react.JSX.Element {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -45,22 +46,30 @@ export function Homelayout(): react.JSX.Element {
     </motion.div>
   );
 
-  return (
-    <div>
-      <div className="flex justify-around fixed top-0 left-0 right-0 z-50 py-6 px-8 bg-gradient-to-r from-purple-900/80 via-indigo-900/80 to-blue-900/80 backdrop-blur-md border-b border-white/10">
-        <div className="flex justify-start">
-          <span>HIT AEIE</span>
-        </div>
-        <div className="flex justify space-x-8
- text-gray-400">
-          <NavItem to="/" label="Home" tabIndex={1} underlineWidth="w-9" />
-          <NavItem to="/Events" label="Events" tabIndex={2} underlineWidth="w-13" />
-          <NavItem to="/Clubs" label="Clubs" tabIndex={3} underlineWidth="w-9" />
-          <NavItem to="/AboutUs" label="About" tabIndex={4} underlineWidth="w-10" />
-          <NavItem to="/contectUs" label="Contact us" tabIndex={5} underlineWidth="w-23" />
-        </div>
+ return (
+  <div className="flex flex-col min-h-screen">
+    {/* Navbar */}
+    <div className="flex justify-around fixed top-0 left-0 right-0 z-50 py-6 px-8 bg-gradient-to-r from-purple-900/80 via-indigo-900/80 to-blue-900/80 backdrop-blur-md border-b border-white/10">
+      <div className="flex justify-start">
+        <span>HIT AEIE</span>
       </div>
+      <div className="flex space-x-8 text-gray-400">
+        <NavItem to="/" label="Home" tabIndex={1} underlineWidth="w-9" />
+        <NavItem to="/Events" label="Events" tabIndex={2} underlineWidth="w-13" />
+        <NavItem to="/Clubs" label="Clubs" tabIndex={3} underlineWidth="w-9" />
+        <NavItem to="/AboutUs" label="About" tabIndex={4} underlineWidth="w-10" />
+        <NavItem to="/contectUs" label="Contact us" tabIndex={5} underlineWidth="w-23" />
+      </div>
+    </div>
+
+    {/* Push page content down so it doesn’t hide under navbar */}
+    <div className="flex-grow pt-24">
       <Outlet />
     </div>
-  );
+
+    {/* Footer visible on every page, sticks at bottom */}
+    <Footer />
+  </div>
+);
+
 }
