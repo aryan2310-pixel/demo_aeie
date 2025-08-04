@@ -10,6 +10,7 @@ import {
 import { Homelayout } from "./layout/Home/Home_layout";
 import { Homepage } from "./pages/home/Home";
 import { AboutUs } from "./pages/home/AboutUs";
+import { Clubs } from "./pages/home/Clubs";
 
 const rootrouter = createRootRoute({
   component: Homelayout,
@@ -26,9 +27,13 @@ const AboutUsroute = createRoute({
   component: AboutUs,
 });
 
+const Clubsroute = createRoute({
+  getParentRoute: () => rootrouter,
+  path: "/Clubs",
+  component: Clubs,
+});
 
-
-const routeTree = rootrouter.addChildren([Homeroute,AboutUsroute]);
+const routeTree = rootrouter.addChildren([Homeroute,AboutUsroute,Clubsroute]);
 const router = createRouter({ routeTree });
 
 createRoot(document.getElementById("root")!).render(
