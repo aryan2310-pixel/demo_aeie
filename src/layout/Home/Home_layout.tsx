@@ -51,7 +51,8 @@ export function Homelayout(): react.JSX.Element {
         <div className="flex justify-start">
           <span>HIT AEIE</span>
         </div>
-        <div className="flex gap-4 text-gray-400">
+        <div className="flex justify space-x-8
+ text-gray-400">
           <NavItem to="/" label="Home" tabIndex={1} underlineWidth="w-9" />
           <NavItem to="/Events" label="Events" tabIndex={2} underlineWidth="w-13" />
           <NavItem to="/Study" label="Study" tabIndex={3} underlineWidth="w-9" />
