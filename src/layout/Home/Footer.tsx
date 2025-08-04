@@ -12,7 +12,9 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-r from-purple-900/80 via-indigo-900/80 to-blue-900/80 backdrop-blur-md border-t border-white/10 text-gray-300">
+  <footer className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-950
+ backdrop-blur-md border-t border-white/10 text-gray-300">
+
       <div className="max-w-7xl mx-auto px-6 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 items-center text-center sm:text-left">
           

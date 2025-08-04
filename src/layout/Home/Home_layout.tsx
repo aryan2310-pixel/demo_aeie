@@ -47,9 +47,10 @@ export function Homelayout(): react.JSX.Element {
   );
 
  return (
-  <div className="flex flex-col min-h-screen">
-    {/* Navbar */}
-    <div className="flex justify-around fixed top-0 left-0 right-0 z-50 py-6 px-8 bg-gradient-to-r from-purple-900/80 via-indigo-900/80 to-blue-900/80 backdrop-blur-md border-b border-white/10">
+ <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-950">
+  {/* Navbar */}
+   <div className="flex justify-around fixed top-0 left-0 right-0 z-50 py-6 px-8 
+      bg-transparent backdrop-blur-md border-b border-white/10">
       <div className="flex justify-start">
         <span>HIT AEIE</span>
       </div>
@@ -62,14 +63,15 @@ export function Homelayout(): react.JSX.Element {
       </div>
     </div>
 
-    {/* Push page content down so it doesn’t hide under navbar */}
-    <div className="flex-grow pt-24">
+    {/* Content wrapper with just enough space for navbar */}
+    <div className="flex-grow pt-[88px]"> 
       <Outlet />
     </div>
 
-    {/* Footer visible on every page, sticks at bottom */}
+    {/* Footer */}
     <Footer />
   </div>
 );
+
 
 }
