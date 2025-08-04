@@ -26,6 +26,8 @@ const AboutUsroute = createRoute({
   component: AboutUs,
 });
 
+
+
 const routeTree = rootrouter.addChildren([Homeroute,AboutUsroute]);
 const router = createRouter({ routeTree });
 

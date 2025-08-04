@@ -55,7 +55,7 @@ export function Homelayout(): react.JSX.Element {
  text-gray-400">
           <NavItem to="/" label="Home" tabIndex={1} underlineWidth="w-9" />
           <NavItem to="/Events" label="Events" tabIndex={2} underlineWidth="w-13" />
-          <NavItem to="/Study" label="Study" tabIndex={3} underlineWidth="w-9" />
+          <NavItem to="/Study" label="Clubs" tabIndex={3} underlineWidth="w-9" />
           <NavItem to="/AboutUs" label="About" tabIndex={4} underlineWidth="w-10" />
           <NavItem to="/contectUs" label="Contact us" tabIndex={5} underlineWidth="w-23" />
         </div>
