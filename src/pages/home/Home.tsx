@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Slideshow } from "../../components/Slide/Slide";
+import { Footer } from "../../layout/Home/Footer";
 
 export const Homepage: React.FC = () => {
   // Define the images to be used in the slideshow
@@ -108,6 +109,7 @@ export const Homepage: React.FC = () => {
       
       
       </div>
+       <Footer /> 
     </div>
   );
 };
